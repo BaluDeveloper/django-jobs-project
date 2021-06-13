@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel = "stylesheet" href = "{% static "css/demo.css" %}">
+    <title>{{area_msg}}</title>
+  </head>
+  <body>
+    <h1>{{area_msg}}</h1>
+    <div id="area">
+      <img src = "{% static img_1 %}" alt ="">
+      <img src = "{% static img_2 %}" alt ="">
+      <img src = "{% static img_3 %}" alt ="">
+    </div>
+
+    <h2> Job Details</h2>
+    {% if jobs_list %}
+      <table>
+        <thead>
+          <th>Date</th>
+          <th>Company</th>
+          <th>Job Title</th>
+          <th>Eligibility</th>
+          <th>Company Address</th>
+          <th>Email</th>
+          <th>Phone Number</th>
+        </thead>
+      {% for job in jobs_list %}
+        <tr>
+          <td>{{job.date}}</td>
+          <td>{{job.company}}</td>
+          <td>{{job.job_title}}</td>
+          <td>{{job.eligibility}}</td>
+          <td>{{job.address}}</td>
+          <td>{{job.email}}</td>
+          <td>{{job.phone_number}}</td>
+        </tr>
+      {% endfor %}
+      </table>
+    {% else %}
+      <h3>No Records Found...</h3>
+  {% endif %}
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel = "stylesheet" href = "{% static "css/demo.css" %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Home</title>
+  </head>
+  <body>
+    <div class="container" align = "center">
+      <div class="jumbotron">
+        <h1 class="display-5">Welcome to Jobs Portal </h1>
+        <p class="lead">Stay Tuned for Continous Jobs Updates...</p>
+        <a class="btn btn-primary btn-lg" href="/hydjobs" role="button">Hyderabad Jobs Information</a> &nbsp&nbsp
+        <a class="btn btn-primary btn-lg" href="/punejobs" role="button">Pune Jobs Information</a>&nbsp&nbsp
+        <a class="btn btn-primary btn-lg" href="/delhijobs" role="button">Delhi Jobs Information</a>
+    </div>
+  </div>
+
+  </body>
+</html>
